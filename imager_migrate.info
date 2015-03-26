@@ -1,0 +1,9 @@
+name = "Imager - Migrate images"
+package = "EcoSleuth"
+core = "7.x"
+
+dependencies[] = "file_entity"
+dependencies[] = "migrate"
+description = "Imager - migrate images into test site"
+files[] = imager_migrate.migrate.inc
+

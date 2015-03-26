@@ -1,0 +1,85 @@
+<?php
+
+/**
+ * @file
+ * imager_migrate.install - Set up the imager_migrate
+ */
+
+
+function getCsvFiles($path, $spaces="") {
+
+  $ignore = array('images','cgi-bin','.','..'); // Directories to ignore
+  $dh = opendir($path);        // Open the directory to the handle $dh
+
+  $csvfiles = array();
+  while (false !== ($file = readdir($dh))) {
+    if (!in_array($file, $ignore)) {    // Check that this file is not to be ignored
+      if( is_dir("$path/$file")){
+        echo "$spaces <strong>$file</strong><br />\n";
+        $newcsvfiles = getCsvFiles("$path/$file",$spaces . "   ");
+        foreach ($newcsvfiles as $i => $value) { 
+          $csvfiles[] = $value;
+        }
+      } else
+      {
+        if (preg_match('/.*\.csv/i',$file)) {
+          $csvfiles[] = "$path/$file";
+          echo "$spaces Add csv file - $path/$file<br />\n";
+        } else
+        {
+//        echo "$spaces Skip $file<br />\n";
+        }
+      }
+    }
+  }
+  closedir( $dh );
+  return $csvfiles;
+}
+
+/**
+ * Given a .csv filename, generate a migration name
+ * 
+ * Prepend pic_ to discriminate image migrations for all other migrations 
+ * 
+ * @param type $file
+ * @param type $category
+ * 
+ * @return string migrateName
+ */
+function makeMigrateName ($file,$category) {
+   $migrateName = preg_replace('/_csv/','', preg_replace('/_+/', '_', preg_replace('/[^a-z0-9]/', '_', strtolower($file))));
+   $migrateName = $category . $migrateName;
+   return $migrateName;
+}
+
+/**
+ * Implements hook_enable().
+ */
+function imager_migrate_enable() {
+  $csvpath = DRUPAL_ROOT . '/sites/default/files/migrate.csv';
+  $csvfiles = getCsvFiles($csvpath);
+  foreach ($csvfiles as $i => $file) {
+    $pieces = explode("/", $file);
+    $filename = end($pieces);
+    $migration = makeMigrateName($filename,'pic_');
+    echo "enable -- $migration -- $file -- $filename<br />\n";
+    Migration::registerMigration('imgMig',$migration,array('source_file' => $file));
+//  Migration::registerMigration($migration,array('source_file' => $file));
+  }
+}
+
+/**
+ * Implements hook_disable().
+ */
+function imager_migrate_disable() {
+  return;
+  $csvpath = DRUPAL_ROOT . '/sites/default/files/migrate.csv';
+  $csvfiles = getCsvFiles($csvpath);
+  foreach ($csvfiles as $i => $file) {
+    $pieces = explode("/", $file);
+    $filename = end($pieces);
+    $migration = makeMigrateName($filename,'pic_');
+    echo "disable -- $migration -- $file -- $filename<br />\n";
+    Migration::deregisterMigration($migration);
+  }
+}
