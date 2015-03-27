@@ -56,7 +56,7 @@ function makeMigrateName ($file,$category) {
  * Implements hook_enable().
  */
 function imager_migrate_enable() {
-  $csvpath = drupal_get_path('module', 'imager') . '/migrate.csv';
+  $csvpath = drupal_get_path('module', 'imager_migrate') . '/migrate.csv';
 //$csvpath = DRUPAL_ROOT . '/sites/default/files/migrate.csv';
   $csvfiles = getCsvFiles($csvpath);
   foreach ($csvfiles as $i => $file) {
@@ -74,7 +74,7 @@ function imager_migrate_enable() {
  */
 function imager_migrate_disable() {
   return;
-  $csvpath = drupal_get_path('module', 'imager') . '/migrate.csv';
+  $csvpath = drupal_get_path('module', 'imager_migrate') . '/migrate.csv';
 //$csvpath = DRUPAL_ROOT . '/sites/default/files/migrate.csv';
   $csvfiles = getCsvFiles($csvpath);
   foreach ($csvfiles as $i => $file) {

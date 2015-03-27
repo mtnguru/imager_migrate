@@ -104,7 +104,7 @@ class imgMig extends DynamicMigration {
   }
 
   function prepareRow($row){
-//  $row->geo_type = 'point';
+    $row->SrcPath = str_replace('DRUPAL_ROOT', DRUPAL_ROOT, $row->SrcPath);     
   }
 
   function fields() {
