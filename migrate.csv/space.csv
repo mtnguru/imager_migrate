@@ -1,0 +1,16 @@
+Who,What,Title,SrcPath,SrcFile,DestPath,DestFile
+,,Butterfly Nebulae,/home/eco/dist/src/sites/default/files/migrate.images,Butterfly.jpg,public://pictures,Butterfly.jpg
+,,Aurora Borealis in Iceland,/home/eco/dist/src/sites/default/files/migrate.images,aurora_iceland.jpg,public://pictures,aurora_iceland.jpg
+,,Igloo in Iceland,/home/eco/dist/src/sites/default/files/migrate.images,aurora_igloo-a.jpg,public://pictures,aurora_igloo-a.jpg
+,,Earth from Space,/home/eco/dist/src/sites/default/files/migrate.images,earth.jpg,public://pictures,earth.jpg
+,,Eye of God Nebulae,/home/eco/dist/src/sites/default/files/migrate.images,eye-nebulae.jpg,public://pictures,eye-nebulae.jpg
+,,Bee gathering pollen,/home/eco/dist/src/sites/default/files/migrate.images,flower5.jpg,public://pictures,flower5.jpg
+,,Bee gathering pollen,/home/eco/dist/src/sites/default/files/migrate.images,flower7.jpg,public://pictures,flower7.jpg
+,,Horsehead nebulae closeup,/home/eco/dist/src/sites/default/files/migrate.images,horsehead.jpg,public://pictures,horsehead.jpg
+,,Horsehead nebulae in Infrared,/home/eco/dist/src/sites/default/files/migrate.images,horsehead_ir.jpg,public://pictures,horsehead_ir.jpg
+,,Milky way from Sedona Az,/home/eco/dist/src/sites/default/files/migrate.images,milky_way.jpg,public://pictures,milky_way.jpg
+,,Northern Lights,/home/eco/dist/src/sites/default/files/migrate.images,northern-lights.jpg,public://pictures,northern-lights.jpg
+,,Shooting Star,/home/eco/dist/src/sites/default/files/migrate.images,shooting_star.jpg,public://pictures,shooting_star.jpg
+,,Sombrero galaxy,/home/eco/dist/src/sites/default/files/migrate.images,spiral-galaxy.jpg,public://pictures,spiral-galaxy.jpg
+,,Is this is a picture or painting,/home/eco/dist/src/sites/default/files/migrate.images,stars.jpg,public://pictures,stars.jpg
+,,Composite of many Nebulae,/home/eco/dist/src/sites/default/files/migrate.images,up.png,public://pictures,up.png
