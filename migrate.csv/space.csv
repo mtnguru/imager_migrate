@@ -12,5 +12,5 @@ Who,What,Title,SrcPath,SrcFile,DestPath,DestFile
 ,,Northern Lights,DRUPAL_ROOT/sites/all/modules/custom/imager_migrate/migrate.images,northern-lights.jpg,public://pictures,northern-lights.jpg
 ,,Shooting Star,DRUPAL_ROOT/sites/all/modules/custom/imager_migrate/migrate.images,shooting_star.jpg,public://pictures,shooting_star.jpg
 ,,Sombrero galaxy,DRUPAL_ROOT/sites/all/modules/custom/imager_migrate/migrate.images,spiral-galaxy.jpg,public://pictures,spiral-galaxy.jpg
-,,Is this is a picture or painting,DRUPAL_ROOT/sites/all/modules/custom/imager_migrate/migrate.images,stars.jpg,public://pictures,stars.jpg
+,,Is this a Picture or a Painting,DRUPAL_ROOT/sites/all/modules/custom/imager_migrate/migrate.images,stars.jpg,public://pictures,stars.jpg
 ,,Composite of many Nebulae,DRUPAL_ROOT/sites/all/modules/custom/imager_migrate/migrate.images,up.png,public://pictures,up.png
